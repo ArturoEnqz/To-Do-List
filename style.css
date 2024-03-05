@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1A1C21;
+}
+
+.container {
+    max-width: 660px;
+    margin: 20px auto;
+    background-color: #1A1C21;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.to-do {
+    width: 100%;
+    max-width: 660px;
+    background: #1A1C21;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 40px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1A1C21;
+    padding-left: 0px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: #262931;
+    color: lightgrey;
+    font-size: 20px;
+    padding: 10px;
+}
+
+button {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    background: dodgerblue;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px;
+    max-width: 150px;
+    cursor: pointer;
+}
+
+ul li {
+    color: lightgrey;
+    font-family: "Trebuchet MS", sans-serif;
+    list-style: none;
+    font-size: 20px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("img/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url("img/checked.png");
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: lightgrey;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background: #353944;
+    border-radius: 50px;
+}
